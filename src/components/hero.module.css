@@ -18,8 +18,8 @@
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
   left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 14px;
   padding: 0 0.5em;
 }

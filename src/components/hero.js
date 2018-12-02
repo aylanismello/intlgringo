@@ -11,9 +11,12 @@ export default ({ data }) => (
       sizes={data.heroImage.sizes}
     />
     <div className={styles.heroDetails}>
-      <h3 className={styles.heroHeadline}>{data.name}</h3>
-      <p className={styles.heroTitle}>{data.title}</p>
-      <p>{data.shortBio.shortBio}</p>
+      <h3 className={styles.heroHeadline}>{data.title}</h3>
+      {/* <div
+        dangerouslySetInnerHTML={{
+          __html: data.description.childMarkdownRemark.html,
+        }}
+      /> */}
     </div>
   </div>
 );

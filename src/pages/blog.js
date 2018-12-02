@@ -47,11 +47,6 @@ export const pageQuery = graphql`
               ...GatsbyContentfulSizes_tracedSVG
             }
           }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
         }
       }
     }

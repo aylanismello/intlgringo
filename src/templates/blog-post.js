@@ -2,6 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import get from 'lodash/get';
 import Img from 'gatsby-image';
+import styles from './blog-post.module.css';
+import './blog-post.css';
 
 import heroStyles from '../components/hero.module.css';
 
@@ -29,7 +31,7 @@ class BlogPostTemplate extends React.Component {
           >
             {post.publishDate}
           </p>
-          <div
+          <div className='postContent'
             dangerouslySetInnerHTML={{
               __html: post.body.childMarkdownRemark.html,
             }}
