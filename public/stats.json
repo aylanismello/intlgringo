@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "path---blog-shanghai-24-hour-layover": [
-      "path---blog-shanghai-24-hour-layover-04faf3af0f7a692189e3.js",
-      "path---blog-shanghai-24-hour-layover-04faf3af0f7a692189e3.js.map"
+      "path---blog-shanghai-24-hour-layover-56e5edbb1c0e032c4e31.js",
+      "path---blog-shanghai-24-hour-layover-56e5edbb1c0e032c4e31.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-50fe55795a6185851b06.js",
-      "component---src-pages-index-js-50fe55795a6185851b06.js.map"
+      "component---src-pages-index-js-e7a2a2595b60d7e624e0.js",
+      "component---src-pages-index-js-e7a2a2595b60d7e624e0.js.map"
     ],
     "path---blog": [
       "path---blog-57f65b32e1f19e71450c.js",
@@ -17,8 +17,8 @@
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-8b976af5d12845ae2ce2.js",
-      "component---src-templates-blog-post-js-8b976af5d12845ae2ce2.js.map"
+      "component---src-templates-blog-post-js-7eafb9060c091a806596.js",
+      "component---src-templates-blog-post-js-7eafb9060c091a806596.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-0605e65ff7aa53bf6cc0.js",
@@ -29,19 +29,27 @@
       "path---index-ecc6a0b6b62532f74ca4.js.map"
     ],
     "commons": [
-      "commons-5970e3e1a116a960eb22.js",
+      "commons-6b7e0013c85f9ea3cb2f.js",
       "build-js-styles.css",
-      "commons-5970e3e1a116a960eb22.js.map",
+      "commons-6b7e0013c85f9ea3cb2f.js.map",
       "build-js-styles.css.map"
     ],
+    "component---src-pages-soundtracks-js": [
+      "component---src-pages-soundtracks-js-79d3d121b60ffe60af7f.js",
+      "component---src-pages-soundtracks-js-79d3d121b60ffe60af7f.js.map"
+    ],
     "component---src-pages-blog-js": [
-      "component---src-pages-blog-js-50ba19b22753030e51c4.js",
-      "component---src-pages-blog-js-50ba19b22753030e51c4.js.map"
+      "component---src-pages-blog-js-d83dd14ed85bd5da178d.js",
+      "component---src-pages-blog-js-d83dd14ed85bd5da178d.js.map"
+    ],
+    "path---soundtracks": [
+      "path---soundtracks-a0e39f21c11f6a62c5ab.js",
+      "path---soundtracks-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-5dabe3cd4a92e71a7fc0.js",
+      "app-96fc1d8f0246797d0dc0.js",
       "build-js-styles.css",
-      "app-5dabe3cd4a92e71a7fc0.js.map",
+      "app-96fc1d8f0246797d0dc0.js.map",
       "build-js-styles.css.map"
     ]
   }
