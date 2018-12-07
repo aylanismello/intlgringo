@@ -1,3 +1,11 @@
 .rotate-md-image {
   /* transform: rotate(90deg); */
 }
+
+/* @media (min-width: 700px) {
+  img {
+    width: 35%;
+    height: auto;
+    margin: auto;
+  }
+} */
