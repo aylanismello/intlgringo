@@ -87,11 +87,13 @@ I myself am not a lanky, middle aged European with a receding hairline and no se
 
 > Usually referring to a creepy, fat and balding white male who goes to Asia (often Southeast Asia) to exploit his white privilege, favorable currency exchange rate and host countries' colonial legacy to have sex with the local Asian women there. A sex tourist on an extended stay. These men have no game in their home countries and typically had low level jobs back home. Before they leave for Asia, you'll find these types on The Red Pill ranting about how Western women do not appreciate how much of a nice guy they are. They are the ones who give WMAF relationships a bad name, and any hapa child that results from these encounters tend to develop severe mental illness when they reach adulthood realizing they are a product of sexual fetishism and white supremacy.
 
-The openness with which the sexpats frolic around down with their 'partners' came off as quite of shock to me, but I suppose this is more an indication of how  blissfully ignorant I've been that how common this type of behavior is. I could only imagine the sights I'll see in Bangkok. Oh, my.
+The openness with which the sexpats frolic around down with their 'partners' really surprised me, but I guess this is more an indication of how blissfully ignorant I've been. I could only imagine the sights I'll see in Bangkok. Oh, my.
 
 ### Fin
 
 So there you have it! I'm excited to dig into specific experiences from my stay here and write in more depth. As far as a place to get your first glimpse into Thai culture, its people, environment, and food, I think it's safe to say that Chiang Mai is an excellent choice.
 
 ![so fresh so clean](https://lh3.googleusercontent.com/xewsq-n8Boaxtp7jkpN6DoRB9c0vTNSYS8DZ2VPm4smHgJJTyf-cMBsr_oWzB4vt-8swcqi7_4OBio9XwfF9KYTXMNF3hLULc9y5hlZ38ZjLhTsowSzeFeFdhB71hIRHKu8PhhCNn0tLhwNnRzkreE7aH-JcXCOEXT0q4aVumOorHZgDBuMnApPD7tnJ1AohClhwHRRBomL27yhwEFuwdTmIly6OYt03CfQvqeDPGJ77ds6KYjuQT61s7IJgaYrSFxwhC_h8LD-MZ0qv80h9YLZgLVfgUzXHFMlHtu75GXbT4wk0sRhl13gVhugXAQUjrwRLltFpoaGRkdpgL5HhRaoAs-ChZk8-65RmOvu43ItHAdyifyJzaMelYWtS3f_mbPualS0kYHbEk2AbvCKq5_Ee1HqeCYxn6PEK-Q6gJtbC4DoOWwK91yNRMAxcvjm2QPkAMsau3bvKzHxgdHQl0PvP1TuGd0RgE2ZfVtd98FoyyvGXO1aIFSnUodG7iq6mTlXtfQBYzMxPCvfmpAHTxIvX8ACzUEonDbXXecUvtvypEDOPCHc7lm9rk_v2rnxNVxQPjp5xnPCc05LHLPxa-ZLHkQ4pKI2XFb-18_CfX6rbMp0zrXWPh9sdceVDR5ToXUO-L2DbWSYjBNuetPQ-sAU6xQ=w1280-h622-no)
+
+`from the top of Doi Suthep with Chiang Mai in the background`
 
