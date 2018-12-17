@@ -1,20 +1,20 @@
 {
   "assetsByChunkName": {
     "path---blog-shanghai-24-hour-layover": [
-      "path---blog-shanghai-24-hour-layover-bd92c404b4fcb387c1cc.js",
-      "path---blog-shanghai-24-hour-layover-bd92c404b4fcb387c1cc.js.map"
+      "path---blog-shanghai-24-hour-layover-22ccd091cebc65e04258.js",
+      "path---blog-shanghai-24-hour-layover-22ccd091cebc65e04258.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-af8216e62b39af94c962.js",
       "component---src-pages-index-js-af8216e62b39af94c962.js.map"
     ],
     "path---blog": [
-      "path---blog-5a8d79f79e5d10ccdb8b.js",
-      "path---blog-5a8d79f79e5d10ccdb8b.js.map"
+      "path---blog-7db17724b2db226f9042.js",
+      "path---blog-7db17724b2db226f9042.js.map"
     ],
     "path---blog-a-visit-to-a-thai-elephant-sanctuary": [
-      "path---blog-a-visit-to-a-thai-elephant-sanctuary-824364fbd413a4517f6a.js",
-      "path---blog-a-visit-to-a-thai-elephant-sanctuary-824364fbd413a4517f6a.js.map"
+      "path---blog-a-visit-to-a-thai-elephant-sanctuary-a67a3b5cdc9021ef8101.js",
+      "path---blog-a-visit-to-a-thai-elephant-sanctuary-a67a3b5cdc9021ef8101.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -25,12 +25,12 @@
       "component---src-templates-blog-post-js-0c54879721e025ffcb13.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-4beb054a9760415e415f.js",
-      "component---src-layouts-index-js-4beb054a9760415e415f.js.map"
+      "component---src-layouts-index-js-deb5865f80496cf84442.js",
+      "component---src-layouts-index-js-deb5865f80496cf84442.js.map"
     ],
     "path---index": [
-      "path---index-a9422bc4aada3a2cb08f.js",
-      "path---index-a9422bc4aada3a2cb08f.js.map"
+      "path---index-ec55f471f345ba47f200.js",
+      "path---index-ec55f471f345ba47f200.js.map"
     ],
     "commons": [
       "commons-ddaeccf4501b999fa38d.js",
@@ -39,8 +39,8 @@
       "build-js-styles.css.map"
     ],
     "path---blog-first-impressions-of-chiang-mai": [
-      "path---blog-first-impressions-of-chiang-mai-ce878cec9a4b1d137051.js",
-      "path---blog-first-impressions-of-chiang-mai-ce878cec9a4b1d137051.js.map"
+      "path---blog-first-impressions-of-chiang-mai-e9e192ef87bfc9241136.js",
+      "path---blog-first-impressions-of-chiang-mai-e9e192ef87bfc9241136.js.map"
     ],
     "component---src-pages-soundtracks-js": [
       "component---src-pages-soundtracks-js-2d46c5d0338dbac23ab0.js",
@@ -50,19 +50,23 @@
       "component---src-pages-blog-js-b2966e18297c980925d3.js",
       "component---src-pages-blog-js-b2966e18297c980925d3.js.map"
     ],
+    "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon": [
+      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-3d8beda9f74a7cec7ce6.js",
+      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-3d8beda9f74a7cec7ce6.js.map"
+    ],
     "path---soundtracks": [
       "path---soundtracks-a0e39f21c11f6a62c5ab.js",
       "path---soundtracks-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-1fea1f91b31bb8d5afd0.js",
+      "app-d3cfaf521a3b7a4c2d73.js",
       "build-js-styles.css",
-      "app-1fea1f91b31bb8d5afd0.js.map",
+      "app-d3cfaf521a3b7a4c2d73.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-time-for-a-southeast-asia-trip": [
-      "path---blog-time-for-a-southeast-asia-trip-af5127f6a0617ce4661f.js",
-      "path---blog-time-for-a-southeast-asia-trip-af5127f6a0617ce4661f.js.map"
+      "path---blog-time-for-a-southeast-asia-trip-81487cdb32ee0ebb182e.js",
+      "path---blog-time-for-a-southeast-asia-trip-81487cdb32ee0ebb182e.js.map"
     ]
   }
 }
