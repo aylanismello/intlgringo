@@ -1,56 +1,68 @@
 {
   "assetsByChunkName": {
     "path---blog-shanghai-24-hour-layover": [
-      "path---blog-shanghai-24-hour-layover-56e5edbb1c0e032c4e31.js",
-      "path---blog-shanghai-24-hour-layover-56e5edbb1c0e032c4e31.js.map"
+      "path---blog-shanghai-24-hour-layover-bd92c404b4fcb387c1cc.js",
+      "path---blog-shanghai-24-hour-layover-bd92c404b4fcb387c1cc.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-e7a2a2595b60d7e624e0.js",
-      "component---src-pages-index-js-e7a2a2595b60d7e624e0.js.map"
+      "component---src-pages-index-js-af8216e62b39af94c962.js",
+      "component---src-pages-index-js-af8216e62b39af94c962.js.map"
     ],
     "path---blog": [
-      "path---blog-57f65b32e1f19e71450c.js",
-      "path---blog-57f65b32e1f19e71450c.js.map"
+      "path---blog-5a8d79f79e5d10ccdb8b.js",
+      "path---blog-5a8d79f79e5d10ccdb8b.js.map"
+    ],
+    "path---blog-a-visit-to-a-thai-elephant-sanctuary": [
+      "path---blog-a-visit-to-a-thai-elephant-sanctuary-824364fbd413a4517f6a.js",
+      "path---blog-a-visit-to-a-thai-elephant-sanctuary-824364fbd413a4517f6a.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-7eafb9060c091a806596.js",
-      "component---src-templates-blog-post-js-7eafb9060c091a806596.js.map"
+      "component---src-templates-blog-post-js-0c54879721e025ffcb13.js",
+      "component---src-templates-blog-post-js-0c54879721e025ffcb13.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-0605e65ff7aa53bf6cc0.js",
-      "component---src-layouts-index-js-0605e65ff7aa53bf6cc0.js.map"
+      "component---src-layouts-index-js-4beb054a9760415e415f.js",
+      "component---src-layouts-index-js-4beb054a9760415e415f.js.map"
     ],
     "path---index": [
-      "path---index-ecc6a0b6b62532f74ca4.js",
-      "path---index-ecc6a0b6b62532f74ca4.js.map"
+      "path---index-a9422bc4aada3a2cb08f.js",
+      "path---index-a9422bc4aada3a2cb08f.js.map"
     ],
     "commons": [
-      "commons-6b7e0013c85f9ea3cb2f.js",
+      "commons-ddaeccf4501b999fa38d.js",
       "build-js-styles.css",
-      "commons-6b7e0013c85f9ea3cb2f.js.map",
+      "commons-ddaeccf4501b999fa38d.js.map",
       "build-js-styles.css.map"
     ],
+    "path---blog-first-impressions-of-chiang-mai": [
+      "path---blog-first-impressions-of-chiang-mai-ce878cec9a4b1d137051.js",
+      "path---blog-first-impressions-of-chiang-mai-ce878cec9a4b1d137051.js.map"
+    ],
     "component---src-pages-soundtracks-js": [
-      "component---src-pages-soundtracks-js-79d3d121b60ffe60af7f.js",
-      "component---src-pages-soundtracks-js-79d3d121b60ffe60af7f.js.map"
+      "component---src-pages-soundtracks-js-2d46c5d0338dbac23ab0.js",
+      "component---src-pages-soundtracks-js-2d46c5d0338dbac23ab0.js.map"
     ],
     "component---src-pages-blog-js": [
-      "component---src-pages-blog-js-d83dd14ed85bd5da178d.js",
-      "component---src-pages-blog-js-d83dd14ed85bd5da178d.js.map"
+      "component---src-pages-blog-js-b2966e18297c980925d3.js",
+      "component---src-pages-blog-js-b2966e18297c980925d3.js.map"
     ],
     "path---soundtracks": [
       "path---soundtracks-a0e39f21c11f6a62c5ab.js",
       "path---soundtracks-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-96fc1d8f0246797d0dc0.js",
+      "app-1fea1f91b31bb8d5afd0.js",
       "build-js-styles.css",
-      "app-96fc1d8f0246797d0dc0.js.map",
+      "app-1fea1f91b31bb8d5afd0.js.map",
       "build-js-styles.css.map"
+    ],
+    "path---blog-time-for-a-southeast-asia-trip": [
+      "path---blog-time-for-a-southeast-asia-trip-af5127f6a0617ce4661f.js",
+      "path---blog-time-for-a-southeast-asia-trip-af5127f6a0617ce4661f.js.map"
     ]
   }
 }
