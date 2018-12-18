@@ -6,12 +6,11 @@ import Hero from '../components/hero';
 import ArticlePreview from '../components/article-preview';
 
 // fonts.google.com/
-https: WebFont.load({
+WebFont.load({
   google: {
     families: ['Muli']
   },
 });
-
 
 class RootIndex extends React.Component {
   render() {
