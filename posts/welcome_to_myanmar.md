@@ -6,6 +6,8 @@
 
 > Before deciding to head over to Myanmar, it's wise to get up to date on the situation regarding the many conflicts in the country. The largest one is the plight of the Rohingya people in Rakhine state (western Myanmar on the border with Bangladesh), which [the UN classified as a genocide last year](https://www.economist.com/news/2018/08/28/the-un-reports-that-the-assault-on-the-rohingyas-amounted-to-genocide). Also consider that many city attractions, recreation areas, temple zones, require an entrance fee which makes its way to the government financing these heinous acts. I did the math and figured it was still worth it, but as always, it's always better to be well informed prior to the fact so that you can plan your stay accordingly and don't end up having any delayed ethical dilemmas.
 
+-----
+
 Check out this map. 
 
 ![map](./photos/chiang_mai-myanmar.png)

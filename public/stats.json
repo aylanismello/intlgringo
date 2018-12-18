@@ -9,8 +9,8 @@
       "component---src-pages-index-js-af8216e62b39af94c962.js.map"
     ],
     "path---blog": [
-      "path---blog-7db17724b2db226f9042.js",
-      "path---blog-7db17724b2db226f9042.js.map"
+      "path---blog-d9df8bec0fc59a86e888.js",
+      "path---blog-d9df8bec0fc59a86e888.js.map"
     ],
     "path---blog-a-visit-to-a-thai-elephant-sanctuary": [
       "path---blog-a-visit-to-a-thai-elephant-sanctuary-a67a3b5cdc9021ef8101.js",
@@ -21,16 +21,16 @@
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-0c54879721e025ffcb13.js",
-      "component---src-templates-blog-post-js-0c54879721e025ffcb13.js.map"
+      "component---src-templates-blog-post-js-ad9f9002daae6c7c490c.js",
+      "component---src-templates-blog-post-js-ad9f9002daae6c7c490c.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-deb5865f80496cf84442.js",
       "component---src-layouts-index-js-deb5865f80496cf84442.js.map"
     ],
     "path---index": [
-      "path---index-ec55f471f345ba47f200.js",
-      "path---index-ec55f471f345ba47f200.js.map"
+      "path---index-009d8565589817386002.js",
+      "path---index-009d8565589817386002.js.map"
     ],
     "commons": [
       "commons-ddaeccf4501b999fa38d.js",
@@ -51,22 +51,30 @@
       "component---src-pages-blog-js-b2966e18297c980925d3.js.map"
     ],
     "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon": [
-      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-3d8beda9f74a7cec7ce6.js",
-      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-3d8beda9f74a7cec7ce6.js.map"
+      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-5b8d89e12634483f6a91.js",
+      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-5b8d89e12634483f6a91.js.map"
     ],
     "path---soundtracks": [
       "path---soundtracks-a0e39f21c11f6a62c5ab.js",
       "path---soundtracks-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-d3cfaf521a3b7a4c2d73.js",
+      "app-a4e2b9f8db32636797bf.js",
       "build-js-styles.css",
-      "app-d3cfaf521a3b7a4c2d73.js.map",
+      "app-a4e2b9f8db32636797bf.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-time-for-a-southeast-asia-trip": [
       "path---blog-time-for-a-southeast-asia-trip-81487cdb32ee0ebb182e.js",
       "path---blog-time-for-a-southeast-asia-trip-81487cdb32ee0ebb182e.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-2a49285012e129ae758b.js",
+      "component---src-pages-about-js-2a49285012e129ae758b.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
     ]
   }
 }
