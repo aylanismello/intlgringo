@@ -1,8 +1,17 @@
 import React from 'react';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import WebFont from 'webfontloader';
 import Hero from '../components/hero';
 import ArticlePreview from '../components/article-preview';
+
+// fonts.google.com/
+https: WebFont.load({
+  google: {
+    families: ['Muli']
+  },
+});
+
 
 class RootIndex extends React.Component {
   render() {
