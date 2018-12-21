@@ -4,13 +4,15 @@ import Img from 'gatsby-image';
 
 import styles from './article-preview.module.css';
 
+const truncateTitle = title => ( title && `${title.slice(0, 30)}...`)
+
 export default ({ article }) => (
   <div className={styles.preview}>
     <Link to={`/blog/${article.slug}`}>
       <Img alt="" sizes={article.heroImage.sizes} />{' '}
     </Link>
     <h3 className={styles.previewTitle}>
-      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+      <Link to={`/blog/${article.slug}`}>{truncateTitle(article.title)}</Link>
     </h3>
     <small>{article.publishDate}</small>
     {/* <p

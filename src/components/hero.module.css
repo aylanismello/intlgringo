@@ -14,6 +14,13 @@
   max-height: 400px;
 }
 
+.heroDescription {
+  color: black;
+  background: white;
+  text-align: left;
+  padding: 2rem 2rem 0 2rem;
+}
+
 .heroDetails {
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
