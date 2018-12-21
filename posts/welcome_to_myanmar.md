@@ -22,7 +22,7 @@ Maybe the first thing you'll take note of in Yangon is that, well - goddamn it's
 
 Here's another picture of a map. The blue pin is where I entered the amusement park, it's at the back of a parking lot on the southwest corner of the Yangon zoo and it should be  full of vans, buses, taxis, etc.
 
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=96.1492967605591%2C16.781122485614716%2C96.16732120513916%2C16.79648869386573&amp;layer=mapnik&amp;marker=16.788805745158754%2C96.15830898284912" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=16.7888&amp;mlon=96.1583#map=16/16.7888/96.1583&amp;layers=N">View Larger Map</a></small>
+<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=96.1492967605591%2C16.781122485614716%2C96.16732120513916%2C16.79648869386573&amp;layer=mapnik&amp;marker=16.788805745158754%2C96.15830898284912" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=16.7888&amp;mlon=96.1583#map=16/16.7888/96.1583&amp;layers=N">View Larger Map</a></small>
 
 Tourists pass through this way to enter all the time, so don't worry about making a fuss or disturbing the people working in and around the lot, it's perfectly normal. Upon reaching the back right corner of the parking lot, you should see a fence falling apart with a large gap you could just walk right pass. Do that, and say 'Mingalabar' to the mostly harmless stray dogs guarding the spot. You're in.
 
