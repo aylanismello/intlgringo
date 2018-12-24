@@ -21,13 +21,18 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
+  siteMetadata: {
+    title: "Traveling the world so you don't have to | Internationally Gringo",
+    description: "My name is Aylan Mello and I'm trying out traveling full time and location-independent living. I chronicle my trials and tribulations here, as well as some dope picks on travel and culture.",
+    keywords: 'travel,world,blog,writing,local,adventure'
+  },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Muli']
+          families: ['Muli'],
         },
       },
     },
