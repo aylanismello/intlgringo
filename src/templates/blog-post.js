@@ -12,7 +12,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost');
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-    const { country } = post.place;
+    const country = post.place && post.place.country;
     const { tags } = post;
     const disqusShortname = 'intlgringo';
     const disqusConfig = {
@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
         <div className="wrapper">
           <h1 className="section-headline">{post.title}</h1>
           <p style={{ display: 'block', fontWeight: 600 }}>
-            {country.name} {country.flag}{' '}
+            {country && `${country.name} ${country.flag}`}
             {tags && tags[0] ? `/ ${tags[0].toUpperCase()}` : ''}
           </p>
           <p style={{ display: 'block' }}>{post.publishDate}</p>
