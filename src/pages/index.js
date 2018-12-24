@@ -13,7 +13,7 @@ class RootIndex extends React.Component {
     return (
       <div style={{ background: '#fff' }}>
         <Helmet>
-          <meta name="title" content={title} />
+          <title> {title} <title/>
           <meta name="description" content={description} />
           <meta name="keywords" content={keywords} />
         </Helmet>
