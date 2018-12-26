@@ -5,12 +5,20 @@
       "path---blog-shanghai-24-hour-layover-22ccd091cebc65e04258.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-dcff7949ee09c70bb575.js",
-      "component---src-pages-index-js-dcff7949ee09c70bb575.js.map"
+      "component---src-pages-index-js-6bc9d60d2ece0cf14ce9.js",
+      "component---src-pages-index-js-6bc9d60d2ece0cf14ce9.js.map"
+    ],
+    "path---blog-the-sunrise-economy-of-bagan-myanmar": [
+      "path---blog-the-sunrise-economy-of-bagan-myanmar-fff9481326ed29545179.js",
+      "path---blog-the-sunrise-economy-of-bagan-myanmar-fff9481326ed29545179.js.map"
+    ],
+    "path---blog-5-apps-i-use-when-traveling": [
+      "path---blog-5-apps-i-use-when-traveling-80bb23793cbd64804f06.js",
+      "path---blog-5-apps-i-use-when-traveling-80bb23793cbd64804f06.js.map"
     ],
     "path---blog": [
-      "path---blog-d9df8bec0fc59a86e888.js",
-      "path---blog-d9df8bec0fc59a86e888.js.map"
+      "path---blog-9249f1505bb98d1481c0.js",
+      "path---blog-9249f1505bb98d1481c0.js.map"
     ],
     "path---blog-a-visit-to-a-thai-elephant-sanctuary": [
       "path---blog-a-visit-to-a-thai-elephant-sanctuary-a67a3b5cdc9021ef8101.js",
@@ -20,17 +28,21 @@
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
+    "path---blog-trekking-from-kalaw-to-inle-lake": [
+      "path---blog-trekking-from-kalaw-to-inle-lake-baa75c9d127a9b3b1c79.js",
+      "path---blog-trekking-from-kalaw-to-inle-lake-baa75c9d127a9b3b1c79.js.map"
+    ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-d9bd2ad5c67ab61851b8.js",
-      "component---src-templates-blog-post-js-d9bd2ad5c67ab61851b8.js.map"
+      "component---src-templates-blog-post-js-4406c1b42b55214aa45a.js",
+      "component---src-templates-blog-post-js-4406c1b42b55214aa45a.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-deb5865f80496cf84442.js",
       "component---src-layouts-index-js-deb5865f80496cf84442.js.map"
     ],
     "path---index": [
-      "path---index-0fe5364e3ad7c7a66fe4.js",
-      "path---index-0fe5364e3ad7c7a66fe4.js.map"
+      "path---index-a31596241070668a0dcc.js",
+      "path---index-a31596241070668a0dcc.js.map"
     ],
     "commons": [
       "commons-ddaeccf4501b999fa38d.js",
@@ -51,17 +63,17 @@
       "component---src-pages-blog-js-2e6165cc309167c45292.js.map"
     ],
     "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon": [
-      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-5b8d89e12634483f6a91.js",
-      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-5b8d89e12634483f6a91.js.map"
+      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-6bc9efc30d4a7a05e780.js",
+      "path---blog-welcome-to-myanmar-the-abandoned-amusement-park-in-yangon-6bc9efc30d4a7a05e780.js.map"
     ],
     "path---soundtracks": [
       "path---soundtracks-a0e39f21c11f6a62c5ab.js",
       "path---soundtracks-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-3e84a5a7ff20957798dc.js",
+      "app-bc88d0ff9e4a99cdf85d.js",
       "build-js-styles.css",
-      "app-3e84a5a7ff20957798dc.js.map",
+      "app-bc88d0ff9e4a99cdf85d.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-time-for-a-southeast-asia-trip": [

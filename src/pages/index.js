@@ -11,9 +11,11 @@ class RootIndex extends React.Component {
     const bannerImg = get(this, 'props.data.allContentfulBannerImg.edges')[0];
 
     return (
-      <div style={{ background: '#fff' }}>
+      <div style={{ background: '#fff'}}>
         <Helmet>
-          <title> {title} <title/>
+          <title> {title} </title>
+          <meta property="og:title" content={title} />
+          <meta charset="utf-8" />
           <meta name="description" content={description} />
           <meta name="keywords" content={keywords} />
         </Helmet>

@@ -1,3 +1,5 @@
+# 1-way flight to Chiang Mai (time for a Southeast Asia Trip)
+
 Many moons ago, when I was still speculative about the whole [digital nomad](https://www.reddit.com/r/digitalnomad/comments/911muc/digital_nomad_life_coach_starter_pack/) thing, I decided to book a 1 way ticket to Medellin, Colombia. Medellin had developed a near cult status in the digital nomad community as the mecca of South American cities. Plus, I was sure my limited Spanish could vastly improve, and maybe, if I had time, I could hop around to some neighboring countries. Just for a bit.
 
 Well, that was the original plan anyhow. 
