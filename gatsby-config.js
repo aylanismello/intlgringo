@@ -20,6 +20,8 @@ if (!spaceId || !accessToken) {
   );
 }
 
+// https://www.gatsbyjs.org/packages/gatsby-source-contentful/
+
 module.exports = {
   siteMetadata: {
     title: "Traveling the world so you don't have to | Internationally Gringo",
@@ -62,3 +64,4 @@ module.exports = {
     },
   ],
 };
+

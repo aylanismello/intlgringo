@@ -46,6 +46,13 @@ export const pageQuery = graphql`
         title
       }
     }
+    allContentfulAylanTravelStatus(sort: { fields: [dateArrived], order: DESC } ) {
+      edges {
+        node {
+          summary
+        }
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {

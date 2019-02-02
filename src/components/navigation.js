@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styles from './navigation.module.css';
 
-export default () => (
+export default ({ place }) => (
   <nav role="navigation">
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
@@ -12,7 +12,7 @@ export default () => (
         <Link to="/blog/">blog</Link>
       </li> */}
       <li className={styles.navigationItem}>
-        <Link to="/">now in: 🇹🇲 Myanmar</Link>
+        <Link to="/">now in: {place.country.flag} {place.country.name}</Link>
       </li>
     </ul>
   </nav>

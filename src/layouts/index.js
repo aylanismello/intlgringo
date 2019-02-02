@@ -1,4 +1,5 @@
 import React from 'react';
+import get from 'lodash/get';
 import Link from 'gatsby-link';
 import base from './base.css';
 import Container from '../components/container';
@@ -14,9 +15,13 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`;
     }
 
+    const latestTravelStat = get(this, 'props.data.allContentfulAylanTravelStatus.edges')[0].node;
+    
+    const { summary, dateArrived, place } = latestTravelStat;
+
     return (
       <Container>
-        <Navigation />
+        <Navigation place={place} />
         {children()}
       </Container>
     );
@@ -24,3 +29,25 @@ class Template extends React.Component {
 }
 
 export default Template;
+
+export const pageQuery = graphql`
+  query TravelStatsQuery {
+    allContentfulAylanTravelStatus(
+      sort: { fields: [dateArrived], order: DESC }
+    ) {
+      edges {
+        node {
+          summary
+          dateArrived
+          place {
+            city
+            country {
+              name
+              flag
+            }
+          }
+        }
+      }
+    }
+  }
+`;
