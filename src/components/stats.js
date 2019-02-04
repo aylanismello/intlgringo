@@ -2,8 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import styles from './stats.module.css';
 
+// https://stackoverflow.com/questions/25150570/get-hours-difference-between-two-dates-in-moment-js
 function getNumDaysAbroad() {
-  // https://stackoverflow.com/questions/25150570/get-hours-difference-between-two-dates-in-moment-js
   const europe = moment.duration(moment('2018-3-18').diff(moment('2018-2-6'))).asDays();
   const latAm = moment.duration(moment('2018-9-6').diff(moment('2018-5-12'))).asDays();
   const asiaBeyond = moment.duration(moment(new Date()).diff(moment('2018-11-27'))).asDays();
