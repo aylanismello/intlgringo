@@ -3,13 +3,13 @@ let contentfulConfig;
 try {
   // Load the Contentful config from the .contentful.json
   contentfulConfig = require('./.contentful');
-} catch (_) { }
+} catch (_) {}
 
 // Overwrite the Contentful config with environment variables if they exist
 contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
   accessToken:
-    process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
+    process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken
 };
 
 const { spaceId, accessToken } = contentfulConfig;
@@ -25,7 +25,8 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "Traveling the world so you don't have to | Internationally Gringo",
-    description: "My name is Aylan Mello and I'm trying out traveling full time and location-independent living. I chronicle my trials and tribulations here, as well as some dope picks on travel and culture.",
+    description:
+      "My name is Aylan Mello and I'm trying out traveling full time and location-independent living. I chronicle my trials and tribulations here, as well as some dope picks on travel and culture.",
     keywords: 'travel,world,blog,writing,local,adventure'
   },
   pathPrefix: '/gatsby-contentful-starter',
@@ -34,9 +35,9 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Muli'],
-        },
-      },
+          families: ['Muli']
+        }
+      }
     },
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
@@ -52,16 +53,15 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
-            },
-          },
-        ],
-      },
+              maxWidth: 590
+            }
+          }
+        ]
+      }
     },
     {
       resolve: 'gatsby-source-contentful',
-      options: contentfulConfig,
-    },
-  ],
+      options: contentfulConfig
+    }
+  ]
 };
-

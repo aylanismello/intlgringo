@@ -1,24 +1,23 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 import get from 'lodash/get';
 import Img from 'gatsby-image';
 import { DiscussionEmbed } from 'disqus-react';
 import styles from './blog-post.module.css';
-import './blog-post.css';
 
 import heroStyles from '../components/hero.module.css';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost');
-    debugger;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const country = post.place && post.place.country;
     const { tags } = post;
     const disqusShortname = 'intlgringo';
     const disqusConfig = {
       identifier: post.id,
-      title: post.title,
+      title: post.title
     };
 
     // gist.github.com/lancejpollard/1978404
@@ -27,7 +26,10 @@ class BlogPostTemplate extends React.Component {
       <div style={{ background: '#fff' }}>
         <Helmet>
           <title>{`${post.title}`}</title>
-          <meta name="description" content="I wish I could properly show descriptions" />
+          <meta
+            name="description"
+            content="I wish I could properly show descriptions"
+          />
           <meta
             name="keywords"
             content={tags && tags[0] && tags.map(tag => `${tag}`)}
@@ -46,14 +48,18 @@ class BlogPostTemplate extends React.Component {
         <div className="wrapper">
           <h1 className="section-headline">{post.title}</h1>
           <p style={{ display: 'block', fontWeight: 600 }}>
-            {country && `${country.name} ${country.flag} / `}
+            {country && (
+              <Link to={`/countries/${country.name}`}>
+                {country.name} {country.flag} /
+              </Link>
+            )}
             {tags && tags[0] ? `${tags[0].toUpperCase()}` : ''}
           </p>
           <p style={{ display: 'block' }}>{post.publishDate}</p>
           <div
             className="postContent"
             dangerouslySetInnerHTML={{
-              __html: post.body.childMarkdownRemark.html,
+              __html: post.body.childMarkdownRemark.html
             }}
           />
           <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />

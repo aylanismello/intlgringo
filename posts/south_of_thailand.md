@@ -12,7 +12,7 @@ He had just come back from Khao San road - a tacky, mostly tourist-focused stree
 
 This back and forth encapsulates the current state of Thai tourism. It has, to wax cliché, become a victim of its own success. There is an expectation to be in the country, yet in a weird cultural limbo where all your western needs and amenities are met, and heaven forbid you learn more than a Lonely Planet scrap's worth of Thai phrases.
 
-But nowhere is this more in your face and evident than in the South of Thailands, with world famous islands such as Ko Phi Phi and Ko Tao drawing comparisons to paradise, or if you ask me, draw comparison to a Western European packed Ryan Air flight.
+But nowhere is this more in your face and evident than in the South of Thailands\, with world famous islands such as Ko Phi Phi and Ko Tao drawing comparisons to paradise, or if you ask me, draw comparison to a Western European packed Ryan Air flight.
 
 
 

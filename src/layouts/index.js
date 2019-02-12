@@ -10,13 +10,9 @@ class Template extends React.Component {
     const { location, children } = this.props;
     let header;
 
-    let rootPath = `/`;
-    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`;
-    }
-
+    // https://lodash.com/docs/#get
     const latestTravelStat = get(this, 'props.data.allContentfulAylanTravelStatus.edges')[0].node;
-    
+
     const { summary, dateArrived, place } = latestTravelStat;
 
     return (
