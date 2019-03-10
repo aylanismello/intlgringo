@@ -39,6 +39,7 @@ module.exports = {
         }
       }
     },
+    'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',

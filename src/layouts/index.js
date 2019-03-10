@@ -4,6 +4,11 @@ import Link from 'gatsby-link';
 import base from './base.css';
 import Container from '../components/container';
 import Navigation from '../components/navigation';
+import styled from 'styled-components';
+
+const FullPage = styled.div`
+  padding-top: 8vh;
+`;
 
 class Template extends React.Component {
   render() {
@@ -18,7 +23,7 @@ class Template extends React.Component {
     return (
       <Container>
         <Navigation place={place} />
-        {children()}
+        <FullPage>{children()}</FullPage>
       </Container>
     );
   }
