@@ -7,9 +7,11 @@ class BlogPost extends React.Component {
     
     return (
       <Base location={location}>
-        shit inside
+        <div className="Post" style={{ height: '2000px' }}>
+          shit inside
+        </div>
       </Base>
-    )
+    );
   }
 }
 

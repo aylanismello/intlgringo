@@ -7,8 +7,10 @@ class Index extends React.Component {
     const { location }  = this.props;
     
     return (
-      <Base location={location} >
-        <p>This is just some child text</p>
+      <Base location={location}>
+        <div className="Post" style={{ height: '2000px' }}>
+          shit inside
+        </div>
       </Base>
     );
   }

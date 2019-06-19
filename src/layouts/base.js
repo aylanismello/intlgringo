@@ -19,7 +19,8 @@ const theme = {
   background: 'yellow',
   width: '400px',
   fontDefault: 'sans-serif',
-  fontHeader: 'Quicksand'
+  fontHeader: 'Quicksand',
+  fontSubheader: 'Poppins'
 };
 
 const Wrapper = styled.div`
@@ -55,7 +56,7 @@ const PageContent = styled.div``;
 class Base extends React.Component {
   render() {
     const { children, location } = this.props;
-    
+
     return (
       <ThemeProvider theme={theme}>
         <Wrapper className="Wrapper">
