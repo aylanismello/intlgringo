@@ -35,7 +35,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Muli']
+          families: ['Muli', 'Quicksand']
         }
       }
     },
@@ -59,10 +59,6 @@ module.exports = {
           }
         ]
       }
-    },
-    {
-      resolve: 'gatsby-source-contentful',
-      options: contentfulConfig
     }
   ]
 };
