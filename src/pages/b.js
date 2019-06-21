@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Base from '../layouts/base';
+import Hero from '../components/hero';
 
 const PostContent = styled.div`
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 0.5rem 0.5rem;
   font-family: ${props => props.theme.fontPost};
   font-size: 14px;
@@ -11,37 +12,132 @@ const PostContent = styled.div`
   /* so default will be <= props.theme.breakpoint.mobile.XS / 380px */
 
   @media (min-width: ${props => props.theme.breakpoint.mobileS}) {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 0.5rem 0.7rem;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.mobileM}) {
-    border: 1px solid violet;
+    /* border: 1px solid violet; */
     padding: 1.5rem 25px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.mobileL}) {
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     padding: 1rem 1.5rem;
     padding: 1.5rem 30px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.tablet}) {
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
     padding: 1.5rem 160px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.tabletWide}) {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
   }
+  
   @media (min-width: ${props => props.theme.breakpoint.desktop}) {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     padding: 1.5rem 350px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.desktopWide}) {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding: 1.5rem 480px;
+  }
+`;
+
+const PostTitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid aqua; */
+
+  padding: 10px 40px;
+
+  @media (min-width: ${props => props.theme.breakpoint.mobileS}) {
+    padding: 10px 43px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.mobileM}) {
+    padding: 10px 95px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.mobileL}) {
+    padding: 10px 98px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.tablet}) {
+    padding: 10px 100px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.tabletWide}) {
+    padding: 10px 175px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.desktop}) {
+    padding: 10px 275px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.desktopWide}) {
+    padding: 10px 425px;
+  }
+`;
+
+const PostTitle = styled.span`
+  font-family: ${props => props.theme.fontSubheader};
+  font-size: 28px;
+  font-weight: 600;
+  /* border: 1px solid red; */
+`;
+
+const PostTagsContainer = styled.div`
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+
+  @media (min-width: ${props => props.theme.breakpoint.mobileM}) {
+    padding: 10px 95px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.mobileL}) {
+    padding: 10px 98px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.tablet}) {
+    padding: 10px 100px;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoint.mobileXS}) {
+    padding: 10px 0;
+    display: block;
+  }
+`;
+
+const PostTags = styled.div`
+  /* border: 1px solid red; */
+  div:not(:last-child) {
+    margin-right: 20px;
+  }
+`;
+
+const PostTag = styled.div`
+  display: inline-block;
+  font-family: ${props => props.theme.fontSubheader};
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 100px;
+  padding: 10px 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoint.mobileXS}) {
+    /* border:  10px solid yellow; */
+  /* padding: 5px 10px; */
+    font-size: 14px;
+    padding: 5px 10px;
   }
 `;
 
@@ -51,13 +147,32 @@ class BlogPost extends React.Component {
     
     return (
       <Base location={location}>
-        <div
-          className="Post"
-          style={{ height: '2000px', border: '1px solid blue' }}
+        <div className="Post"
         >
-          BLOG PAGE before content
+          <PostTagsContainer className="PostTagsContainer">
+            <PostTags className="PostTags">
+              <PostTag> 
+                Country Name
+              </PostTag>
+              <PostTag> 
+                Tag here too
+              </PostTag>
+              {/* <PostTag> 
+                TAgs dude
+              </PostTag> */}
+            </PostTags>
+          </PostTagsContainer>
+          <PostTitleContainer className="PostTitleContainer">
+            <PostTitle className="PostTitle">
+              The Dopest Title: Here You Are but it’s Super Sick Tho
+            </PostTitle>
+          </PostTitleContainer>
+          <Hero className="Hero" />
           <PostContent>
-            <p className="inner-content" style={{border: '1px solid yellow'}}>
+            <p
+              className="inner-content"
+              style={{ border: '1px solid yellow' }}
+            >
               Prow scuttle parrel provost Sail ho shrouds spirits boom
               mizzenmast yardarm. Pinnace holystone mizzenmast quarter
               crow's nest nipperkin grog yardarm hempen halter furl. Swab

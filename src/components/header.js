@@ -12,6 +12,7 @@ const Header = styled.div`
   height: ${props => (props.withHero ? '340px' : '72px')};
   background: white;
   font-family: ${props => props.theme.fontHeader};
+  z-index: 100;
 `;
 
 const HeaderTextContainer = styled.div`
@@ -19,11 +20,11 @@ const HeaderTextContainer = styled.div`
   font-weight: 600;
   height: ${props => props.theme.headerTextHeight};
   top: 0;
-  left: 20px;
+  /* left: 20px; */
   width: 100%;
   font-size: 34px;
   color: ${props => (props.withHero ? 'white' : 'black')};
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   align-items: center;
   display: flex;
 
@@ -33,13 +34,21 @@ const HeaderTextContainer = styled.div`
   }
 `;
 
+const HeaderText = styled(Link)`
+  padding-left: 20px;
+  
+  @media (max-width: ${props => props.theme.breakpoint.tablet}) {
+    padding-left: 0;
+  }
+`;
+
 export default ({ withHero }) => (
   <Header withHero={withHero} className="Header">
-    {withHero && <Hero className="Hero" />}
+    {withHero && <Hero className="Hero" isHeader />}
     <HeaderTextContainer withHero={withHero} className="HeaderTextContainer">
-      <Link to="/">
-        <div className="HeaderText"> 🌏 intl gringo </div>
-      </Link>
+      <HeaderText to="/" className="HeaderText">
+        🌏 intl gringo
+      </HeaderText>
     </HeaderTextContainer>
   </Header>
 );
