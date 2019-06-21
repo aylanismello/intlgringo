@@ -18,7 +18,7 @@ class Index extends React.Component {
           Welcome! this is above the content which receives the standard
           pagging
           <PageContent className="PostContent" >
-            <p style={{border: '1px solid blue' }}> 
+            <p > 
               Prow scuttle parrel provost Sail ho shrouds spirits boom
               mizzenmast yardarm. Pinnace holystone mizzenmast quarter
               crow's nest nipperkin grog yardarm hempen halter furl. Swab

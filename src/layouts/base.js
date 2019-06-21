@@ -40,33 +40,6 @@ const theme = {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid ${props => props.theme.background};
-
-  /* TODO: THIS MEDIA QUERY SHIT IS ALL WRONG FIX PLEASE THANKS */
-
-  /* @media (min-width: 380px) {
-    margin: 4rem;
-  }
-
-  @media (min-width: 420px) {
-    margin: 4rem;
-  }
-
-  @media (min-width: 660px) {
-    margin: 4rem;
-  }
-
-  @media (min-width: 780px) {
-    margin: 5rem;
-  }
-
-  @media (min-width: 1000px) {
-    margin: 12rem;
-  }
-
-  @media (min-width: 1200px) {
-    margin: 24rem;
-  } */
 `;
 
 const Page = styled.div`
