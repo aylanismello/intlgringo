@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
+import PostPreviews from '../components/post_previews';
 
 const AylanPic = styled.img`
   width: 100%;
@@ -82,59 +82,6 @@ const AylanStat = ({ src, thing, num }) => (
   </AylanStatStyle>
 );
 
-const PostPreviews = styled.div`
-  /* border: 1px solid pink; */
-
-  /* default here is the largest, widest screen */
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-gap: 20px;
-  justify-content: center;
-
-  @media (max-width: ${props => props.theme.breakpoint.tabletWide}) {
-    grid-template-columns: 47% 47%;
-    grid-gap: 20px;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoint.mobileL}) {
-  padding: 2rem 2rem;
-    grid-template-columns: 98%;
-    grid-gap: 25px;
-  }
-`;
-
-const PostPreviewStyle = styled.div`
-  /* border: 1px solid green; */
-  font-family: ${props => props.theme.fontSubheader};
-  line-height: 1.6;
-  &:hover {
-    cursor: pointer;
-  }
-
-  .PostPreviewTag {
-    color: #324fca;
-    font-weight: 600;
-  }
-
-  .PostPreviewTitle {
-    font-size: 20px;
-    font-weight: 800;
-  }
-
-  .PostPreviewHeroImg {
-    width: 100%;
-    /* height: 300px; */
-  }
-`;
-
-const PostPreview = ({ title, heroImg, mainTag }) => (
-  <PostPreviewStyle>
-    <img src={heroImg} className="PostPreviewHeroImg" />
-    <div className="PostPreviewTag"> {mainTag.toUpperCase()} </div>
-    <div className="PostPreviewTitle">{title}</div>
-  </PostPreviewStyle>
-);
-
 class Index extends React.Component {
   render() {
     const { location } = this.props;
@@ -158,9 +105,9 @@ class Index extends React.Component {
                 </span>
                 <br />
                 <br />
-                Or maybe… I will be the final push. That last push you
-                needed to quit your office job and join the Digital Nomads
-                and Backpackers I find myself amongst these days.
+                Or maybe… I will be the final push. That last push you needed to
+                quit your office job and join the Digital Nomads and Backpackers
+                I find myself amongst these days.
                 <br />
                 <br />
                 So welcome to Internationally Gringo - where you fit in
@@ -191,8 +138,9 @@ class Index extends React.Component {
               })}
             </AylanStats>
 
-            <PostPreviews className="PostPreviews">
-              {[
+            <PostPreviews
+              className="PostPreviews"
+              data={[
                 'Traveling spontaneously in an archipelago (thoughts on adjusting to the Philippines)',
                 '6 months in Southeast Asia, but Vietnam still shocks',
                 'The Good, the Bad, and the South of Thailand',
@@ -202,16 +150,8 @@ class Index extends React.Component {
                 'Traveling spontaneously in an archipelago (thoughts on adjusting to the Philippines)',
                 '6 months in Southeast Asia, but Vietnam still shocks',
                 'The Good, the Bad, and the South of Thailand'
-              ].map(post => (
-                <Link to="/b">
-                  <PostPreview
-                    title={post}
-                    heroImg="https://res.cloudinary.com/burncartel/image/upload/c_scale,q_65,w_800/v1548385339/bc_weekly_80_cover.jpg"
-                    mainTag="thailand"
-                  />
-                </Link>
-              ))}
-            </PostPreviews>
+              ]}
+            />
           </MainContent>
         </div>
       </Base>
