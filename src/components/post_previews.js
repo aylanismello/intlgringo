@@ -55,19 +55,23 @@ const PostPreview = ({ title, heroImg, mainTag }) => (
   </PostPreviewStyle>
 );
 
-const PostPreviews = ({ data }) => (
-  <PostPreviewsStyle>
-    {data.map(post => (
-    <Link to="/b">
-      <PostPreview
-        title={post}
-        heroImg="https://res.cloudinary.com/burncartel/image/upload/c_scale,q_65,w_800/v1548385339/bc_weekly_80_cover.jpg"
-        mainTag="thailand"
-      />
-    </Link>
-    ))}
-  </PostPreviewsStyle>
-);
+const PostPreviews = ({ posts }) => {
 
+  console.log(posts.tags);
+
+  return (
+    <PostPreviewsStyle>
+      {posts.map((post) => (
+        <Link to="/b">
+          <PostPreview
+            title={post.title}
+            heroImg="https://res.cloudinary.com/burncartel/image/upload/c_scale,q_65,w_800/v1548385339/bc_weekly_80_cover.jpg"
+            mainTag={(post.tags && post.tags[0]) ? post.tags[0] : ''}
+          />
+        </Link>
+      ))}
+    </PostPreviewsStyle>
+  );
+};
 
 export default PostPreviews;

@@ -32,6 +32,13 @@ module.exports = {
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: contentfulConfig.spaceId,
+        accessToken: contentfulConfig.accessToken
+      }
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {

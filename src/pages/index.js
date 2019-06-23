@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import get from 'lodash/get';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
 import PostPreviews from '../components/post_previews';
+import AylanStats from '../components/aylan_stats';
 
 const AylanPic = styled.img`
   width: 100%;
@@ -27,6 +29,7 @@ const AylanBio = styled.div`
   /* http://grid.malven.co/ */
   display: grid;
   grid-template-columns: 40% auto;
+  padding-top: 2rem;
   grid-template-rows: auto;
   grid-gap: 50px;
   align-items: center;
@@ -37,61 +40,25 @@ const AylanBio = styled.div`
   }
 `;
 
-const AylanStats = styled.div`
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 40% 40%;
-  grid-gap: 20px;
-  align-items: center;
-  justify-items: center;
-  padding: 1rem 2rem;
-
-  @media (min-width: ${props => props.theme.breakpoint.mobileL}) {
-    grid-template-columns: 22% 22% 22% 22%;
-  }
-`;
-
-const AylanStatImg = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-`;
-
-const AylanStatStyle = styled.div`
-  position: relative;
-`;
-
-const AylanStatTxt = styled.div`
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  font-family: ${props => props.theme.fontHeader};
-  filter: blur(0.5px);
-`;
-
-const AylanStat = ({ src, thing, num }) => (
-  <AylanStatStyle className="AylanStatStyle">
-    <AylanStatImg src={src} className="AylanStatImg" />
-    <AylanStatTxt className="AylanStatTxt">
-      {num} {thing}
-    </AylanStatTxt>
-  </AylanStatStyle>
-);
-
 class Index extends React.Component {
   render() {
     const { location } = this.props;
+    // const { title, description, keywords } = get(
+    //   this,
+    //   'props.data.site.siteMetadata'
+    // );
+
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges');
+    const places = get(this, 'props.data.allContentfulPlace.edges');
+    const countries = get(this, 'props.data.allContentfulCountry.edges');
+
+ 
 
     return (
       <Base location={location}>
         <div className="Index">
           <MainContent className="PageContent">
             <AylanBio className="AylanBio">
-              {/* <div className="AylanPicContainer"> */}
               <AylanPic
                 src="https://res.cloudinary.com/burncartel/image/upload/c_scale,q_65,w_600/v1561276078/aylan_1_pai.jpg"
                 className="AylanPic"
@@ -126,20 +93,14 @@ class Index extends React.Component {
               {/* </div> */}
             </AylanBio>
 
-            <AylanStats className="AylanStats">
-              {[1, 2, 3, 4].map(num => {
-                return (
-                  <AylanStat
-                    src="https://res.cloudinary.com/burncartel/image/upload/v1560928220/bc_weekly_95_cover.jpg"
-                    thing="cities"
-                    num={num}
-                  />
-                );
-              })}
-            </AylanStats>
+            <AylanStats
+              numCities={places.length}
+              numCountries={countries.length}
+            />
 
             <PostPreviews
               className="PostPreviews"
+              posts={posts.map((p) => p.node)}
               data={[
                 'Traveling spontaneously in an archipelago (thoughts on adjusting to the Philippines)',
                 '6 months in Southeast Asia, but Vietnam still shocks',
@@ -160,3 +121,46 @@ class Index extends React.Component {
 }
 
 export default Index;
+
+export const pageQuery = graphql`
+  query HomeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allContentfulPlace {
+      edges {
+        node {
+          city
+          country {
+            name
+          }
+        }
+      }
+    }
+    allContentfulCountry {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+      edges {
+        node {
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              ...GatsbyContentfulSizes_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
