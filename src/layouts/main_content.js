@@ -7,6 +7,9 @@ const MainContent = styled.div`
   font-family: ${props => props.theme.fontPost};
   line-height: 1.35;
 
+  display: grid;
+  grid-row-gap: 5rem;
+
   @media (min-width: ${props => props.theme.breakpoint.mobileS}) {
     padding: 1.5rem 0.7rem;
   }

@@ -14,12 +14,16 @@ const Footer = styled.div`
   > a {
     margin: 0 7px 0 7px;
     padding: 3px;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
 
 const HANDLES = {
   IG: 'https://www.instagram.com/oi_gringo/',
-  TWITTER: 'https://twitter.com/oi_gringo/'
+  TWITTER: 'https://twitter.com/oi_gringo/',
+  AYLAN: 'https://aylan.io/'
 };
 
 export default () => (
@@ -29,6 +33,9 @@ export default () => (
     </a>
     <a href={HANDLES.TWITTER} target="_blank">
       twitter 🐦
+    </a>
+    <a href={HANDLES.AYLAN} target="_blank">
+      designed + coded by aylan.io 💻
     </a>
   </Footer>
 );

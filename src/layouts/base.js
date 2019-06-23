@@ -45,13 +45,6 @@ const Page = styled.div`
   margin-top: ${props => (props.withHero ? '0px' : props.theme.headerTextHeight)};
 `;
 
-  //  <head>
-  //    <link
-  //      rel="icon"
-  //      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/facebook/200/earth-globe-asia-australia_1f30f.png"
-  //    />
-  //  </head>;
-
 class Base extends React.Component {
   render() {
     const { children, location } = this.props;
