@@ -7,8 +7,8 @@ const PostContent = styled.div`
   /* border: 1px solid black; */
   padding: 0.5rem 0.5rem;
   font-family: ${props => props.theme.fontPost};
-  font-size: 14px;
-  line-height: 1.3;
+  font-size: 1.5rem;
+  line-height: 1.4;
   /* so default will be <= props.theme.breakpoint.mobile.XS / 380px */
 
   @media (min-width: ${props => props.theme.breakpoint.mobileS}) {
@@ -23,7 +23,7 @@ const PostContent = styled.div`
 
   @media (min-width: ${props => props.theme.breakpoint.mobileL}) {
     /* border: 1px solid aqua; */
-    padding: 1rem 1.5rem;
+    /* padding: 1rem 1.5rem; */
     padding: 1.5rem 30px;
   }
 
@@ -52,34 +52,34 @@ const PostTitleContainer = styled.div`
   justify-content: center;
   /* border: 1px solid aqua; */
 
-  padding: 10px 40px;
+  padding: 15px 40px;
 
   @media (min-width: ${props => props.theme.breakpoint.mobileS}) {
-    padding: 10px 43px;
+    padding: 15px 43px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.mobileM}) {
-    padding: 10px 95px;
+    padding: 15px 95px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.mobileL}) {
-    padding: 10px 98px;
+    padding: 15px 98px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.tablet}) {
-    padding: 10px 100px;
+    padding: 15px 100px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.tabletWide}) {
-    padding: 10px 175px;
+    padding: 15px 175px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.desktop}) {
-    padding: 10px 275px;
+    padding: 15px 275px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.desktopWide}) {
-    padding: 10px 425px;
+    padding: 15px 425px;
   }
 `;
 
@@ -147,8 +147,7 @@ class BlogPost extends React.Component {
     
     return (
       <Base location={location}>
-        <div className="Post"
-        >
+        <div className="Post">
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
               <PostTag> 
@@ -171,7 +170,7 @@ class BlogPost extends React.Component {
           <PostContent>
             <p
               className="inner-content"
-              style={{ border: '1px solid yellow' }}
+              // style={{ border: '1px solid yellow' }}
             >
               Prow scuttle parrel provost Sail ho shrouds spirits boom
               mizzenmast yardarm. Pinnace holystone mizzenmast quarter
