@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 
+const homePageImg =
+  'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_2000/intl_gringo_banner_1';
+
 const HeroContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoint.tabletWide}) {
     padding: ${props => (props.isHeader ? '' : '0 115px')};
@@ -18,7 +21,7 @@ const HeroContainer = styled.div`
 
 const HeroStyle = styled.div`
   position: relative;
-  background-image: url('https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_2000/intl_gringo_banner_1');
+  background-image: url(${props => props.src || homePageImg});
   background-size: cover;
   width: 100%;
   height: ${props => (props.isHeader ? 'inherit' : '350px')};
@@ -55,9 +58,9 @@ const LocationText = styled.span`
   font-size: 16px;
 `;
 
-const Hero = ({ isHeader }) => (
+const Hero = ({ isHeader, src }) => (
   <HeroContainer className="HeroContainer" isHeader={isHeader}>
-    <HeroStyle className="HeroStyle">
+    <HeroStyle className="HeroStyle" src={src}>
       {isHeader && (
         <LocationText>
           <HeroText className="HeroText">

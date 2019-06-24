@@ -87,8 +87,9 @@ const PostTitleContainer = styled.div`
 
 const PostTitle = styled.span`
   font-family: ${props => props.theme.fontSubheader};
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
+  padding: 1rem;
   /* border: 1px solid red; */
 `;
 
@@ -126,7 +127,7 @@ const PostTags = styled.div`
 const PostTag = styled.div`
   display: inline-block;
   font-family: ${props => props.theme.fontSubheader};
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid gray;
   border-radius: 100px;
   padding: 10px 15px;
@@ -140,6 +141,19 @@ const PostTag = styled.div`
     /* padding: 5px 10px; */
     font-size: 14px;
     padding: 5px 10px;
+  }
+`;
+
+const PostText = styled.div`
+  line-height: 1.6;
+
+  img {
+    max-width: 100%;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
   }
 `;
 
@@ -168,9 +182,9 @@ class BlogPostTemplate extends React.Component {
           <PostTitleContainer className="PostTitleContainer">
             <PostTitle className="PostTitle">{post.title}</PostTitle>
           </PostTitleContainer>
-          <Hero className="Hero" />
+          <Hero className="Hero" src={post.heroImage.sizes.src} />
           <PostContent>
-            <div
+            <PostText
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html
               }}
@@ -185,36 +199,37 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  # https://www.contentful.com/developers/docs/concepts/data-model/
-  query BlogPostBySlug($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-      title
-      tags
-      place {
-        country {
-          name
-          flag
-        }
-        coordinates {
-          lat
-          lon
-        }
-        city
-      }
-      author {
+         # https://www.contentful.com/developers/docs/concepts/data-model/
+query BlogPostBySlug($slug: String!) {
+  contentfulBlogPost(slug: { eq: $slug }) {
+    title
+    tags
+    place {
+      country {
         name
+        flag
       }
-      publishDate(formatString: "MMMM Do, YYYY")
-      heroImage {
-        sizes(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulSizes_tracedSVG
-        }
+      coordinates {
+        lat
+        lon
       }
-      body {
-        childMarkdownRemark {
-          html
-        }
+      city
+    }
+    author {
+      name
+    }
+    publishDate(formatString: "MMMM Do, YYYY")
+    heroImage {
+      sizes {
+        src
+      }
+    }
+    body {
+      childMarkdownRemark {
+        html
       }
     }
   }
+}
 `;
+
