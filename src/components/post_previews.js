@@ -48,9 +48,17 @@ const PostPreviewStyle = styled.div`
   }
 `;
 
+const PostPreviewImg = styled.div`
+  background-image: url(${props => props.src});
+  background-size: cover;
+  width: 100%;
+  height: 150px;
+`;
+
 const PostPreview = ({ title, heroImg, mainTag }) => (
   <PostPreviewStyle>
-    <img src={heroImg} className="PostPreviewHeroImg" />
+    {/* <img src={heroImg} className="PostPreviewHeroImg" /> */}
+    <PostPreviewImg src={heroImg} className="PostPreviewImg" />
     <div className="PostPreviewTag"> {mainTag.toUpperCase()} </div>
     <div className="PostPreviewTitle">{title}</div>
   </PostPreviewStyle>

@@ -16,9 +16,17 @@ const AylanStatsStyle = styled.div`
   }
 `;
 
-const AylanStatImg = styled.img`
-  width: 100%;
-  height: auto;
+// const AylanStatImg = styled.img`
+//   width: 100%;
+//   height: auto;
+//   border-radius: 20px;
+// `;
+const AylanStatImg = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(${props => props.src});
+  background-size: cover;
+  width: 100px;
+  height: 100px;
   border-radius: 20px;
 `;
 
@@ -27,15 +35,21 @@ const AylanStatStyle = styled.div`
 `;
 
 const AylanStatTxt = styled.div`
+  /* background: black; */
   position: absolute;
   text-align: center;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-family: ${props => props.theme.fontHeader};
+  font-weight: 600;
   filter: blur(0.2px);
+
+  &:hover {
+    cursor: default;
+  }
 `;
 
 const AylanStat = ({ src, thing, num }) => (
@@ -61,22 +75,22 @@ function getNumDaysAbroad() {
 export default ({ numCities, numCountries }) => (
   <AylanStatsStyle className="AylanStatsStyle">
     <AylanStat
-      src="https://res.cloudinary.com/burncartel/image/upload/v1560928220/bc_weekly_95_cover.jpg"
+      src="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_300/v1561374621/stats-cities.jpg"
       thing="cities"
       num={numCities}
     />
     <AylanStat
-      src="https://res.cloudinary.com/burncartel/image/upload/v1560928220/bc_weekly_95_cover.jpg"
+      src="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_300/v1561374621/stats-countries.jpg"
       thing="countries"
       num={numCountries}
     />
     <AylanStat
-      src="https://res.cloudinary.com/burncartel/image/upload/v1560928220/bc_weekly_95_cover.jpg"
+      src="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_300/v1561374621/stats-daysAbroad.jpg"
       thing="days traveling"
       num={getNumDaysAbroad()}
     />
     <AylanStat
-      src="https://res.cloudinary.com/burncartel/image/upload/v1560928220/bc_weekly_95_cover.jpg"
+      src="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_300/v1560928220/bc_weekly_95_cover.jpg"
       thing="kg luggage"
       num={14}
     />

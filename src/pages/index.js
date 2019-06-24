@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';

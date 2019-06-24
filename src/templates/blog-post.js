@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DiscussionEmbed } from 'disqus-react';
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import Base from '../layouts/base';
 import Hero from '../components/hero';
