@@ -45,7 +45,6 @@ const AylanStatTxt = styled.div`
   font-size: 18px;
   font-family: ${props => props.theme.fontHeader};
   font-weight: 600;
-  filter: blur(0.2px);
 
   &:hover {
     cursor: default;
