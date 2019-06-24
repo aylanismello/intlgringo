@@ -56,16 +56,13 @@ const PostPreview = ({ title, heroImg, mainTag }) => (
 );
 
 const PostPreviews = ({ posts }) => {
-
-  console.log(posts.tags);
-
   return (
     <PostPreviewsStyle>
       {posts.map((post) => (
-        <Link to="/b">
+        <Link to={`/blog/${post.slug}`}>
           <PostPreview
             title={post.title}
-            heroImg="https://res.cloudinary.com/burncartel/image/upload/c_scale,q_65,w_800/v1548385339/bc_weekly_80_cover.jpg"
+            heroImg={post.heroImage && post.heroImage.sizes.src}
             mainTag={(post.tags && post.tags[0]) ? post.tags[0] : ''}
           />
         </Link>

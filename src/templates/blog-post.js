@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import get from 'lodash/get';
 import Base from '../layouts/base';
 import Hero from '../components/hero';
+
 
 const PostContent = styled.div`
   /* border: 1px solid black; */
@@ -35,7 +37,7 @@ const PostContent = styled.div`
   @media (min-width: ${props => props.theme.breakpoint.tabletWide}) {
     /* border: 1px solid orange; */
   }
-  
+
   @media (min-width: ${props => props.theme.breakpoint.desktop}) {
     /* border: 1px solid yellow; */
     padding: 1.5rem 350px;
@@ -135,58 +137,44 @@ const PostTag = styled.div`
 
   @media (max-width: ${props => props.theme.breakpoint.mobileXS}) {
     /* border:  10px solid yellow; */
-  /* padding: 5px 10px; */
+    /* padding: 5px 10px; */
     font-size: 14px;
     padding: 5px 10px;
   }
 `;
 
-class BlogPost extends React.Component {
+class BlogPostTemplate extends React.Component {
   render() {
     const { location } = this.props;
-    
+
+    const post = get(this.props, 'data.contentfulBlogPost');
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const country = post.place && post.place.country;
+    const { tags } = post;
+
     return (
       <Base location={location}>
         <div className="Post">
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
-              <PostTag> 
-                Country Name
-              </PostTag>
-              <PostTag> 
-                Tag here too
-              </PostTag>
+              {tags.map(tag => (
+                <PostTag>{tag}</PostTag>
+              ))}
               {/* <PostTag> 
                 TAgs dude
               </PostTag> */}
             </PostTags>
           </PostTagsContainer>
           <PostTitleContainer className="PostTitleContainer">
-            <PostTitle className="PostTitle">
-              The Dopest Title: Here You Are but it’s Super Sick Tho
-            </PostTitle>
+            <PostTitle className="PostTitle">{post.title}</PostTitle>
           </PostTitleContainer>
           <Hero className="Hero" />
           <PostContent>
-            <p
-              className="inner-content"
-              // style={{ border: '1px solid yellow' }}
-            >
-              Prow scuttle parrel provost Sail ho shrouds spirits boom
-              mizzenmast yardarm. Pinnace holystone mizzenmast quarter
-              crow's nest nipperkin grog yardarm hempen halter furl. Swab
-              barque interloper chantey doubloon starboard grog black jack
-              gangway rutters. Deadlights jack lad schooner scallywag dance
-              the hempen jig carouser broadside cable strike colors. Bring a
-              spring upon her cable holystone blow the man down spanker
-              Shiver me timbers to go on account lookout wherry doubloon
-              chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm
-              spyglass sheet transom heave to. Trysail Sail ho Corsair red
-              ensign hulk smartly boom jib rum gangway. Case shot Shiver me
-              timbers gangplank crack Jennys tea cup ballast Blimey lee snow
-              crow's nest rutters. Fluke jib scourge of the seven seas
-              boatswain schooner gaff booty Jack Tar transom spirits.
-            </p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: post.body.childMarkdownRemark.html
+              }}
+            />
           </PostContent>
         </div>
       </Base>
@@ -194,4 +182,39 @@ class BlogPost extends React.Component {
   }
 }
 
-export default BlogPost;
+export default BlogPostTemplate;
+
+export const pageQuery = graphql`
+  # https://www.contentful.com/developers/docs/concepts/data-model/
+  query BlogPostBySlug($slug: String!) {
+    contentfulBlogPost(slug: { eq: $slug }) {
+      title
+      tags
+      place {
+        country {
+          name
+          flag
+        }
+        coordinates {
+          lat
+          lon
+        }
+        city
+      }
+      author {
+        name
+      }
+      publishDate(formatString: "MMMM Do, YYYY")
+      heroImage {
+        sizes(maxWidth: 1180, background: "rgb:000000") {
+          ...GatsbyContentfulSizes_tracedSVG
+        }
+      }
+      body {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`;
