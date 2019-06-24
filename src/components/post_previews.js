@@ -26,18 +26,19 @@ const PostPreviewsStyle = styled.div`
 const PostPreviewStyle = styled.div`
   /* border: 1px solid green; */
   font-family: ${props => props.theme.fontSubheader};
-  line-height: 1.6;
+  line-height: 1.4;
   &:hover {
     cursor: pointer;
   }
 
   .PostPreviewTag {
     color: #324fca;
+    font-size: 15px;
     font-weight: 600;
   }
 
   .PostPreviewTitle {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 800;
   }
 

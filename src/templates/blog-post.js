@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { DiscussionEmbed } from 'disqus-react';
 import get from 'lodash/get';
 import Base from '../layouts/base';
 import Hero from '../components/hero';
@@ -162,9 +163,14 @@ class BlogPostTemplate extends React.Component {
     const { location } = this.props;
 
     const post = get(this.props, 'data.contentfulBlogPost');
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const country = post.place && post.place.country;
     const { tags } = post;
+
+    const disqusShortname = 'intlgringo';
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.title
+    };
 
     return (
       <Base location={location}>
@@ -189,6 +195,10 @@ class BlogPostTemplate extends React.Component {
                 __html: post.body.childMarkdownRemark.html
               }}
             />
+            <DiscussionEmbed
+              shortname={disqusShortname}
+              config={disqusConfig}
+            />
           </PostContent>
         </div>
       </Base>
@@ -200,36 +210,37 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
          # https://www.contentful.com/developers/docs/concepts/data-model/
-query BlogPostBySlug($slug: String!) {
-  contentfulBlogPost(slug: { eq: $slug }) {
-    title
-    tags
-    place {
-      country {
+  query BlogPostBySlug($slug: String!) {
+    contentfulBlogPost(slug: { eq: $slug }) {
+      title
+      tags
+      place {
+        country {
+          name
+          flag
+        }
+        coordinates {
+          lat
+          lon
+        }
+        city
+      }
+      author {
         name
-        flag
       }
-      coordinates {
-        lat
-        lon
+      publishDate(formatString: "MMMM Do, YYYY")
+      heroImage {
+        sizes {
+          src
+        }
       }
-      city
-    }
-    author {
-      name
-    }
-    publishDate(formatString: "MMMM Do, YYYY")
-    heroImage {
-      sizes {
-        src
-      }
-    }
-    body {
-      childMarkdownRemark {
-        html
+      body {
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }
-}
 `;
+
 
