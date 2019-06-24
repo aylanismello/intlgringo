@@ -156,6 +156,40 @@ const PostText = styled.div`
     font-size: 24px;
     font-weight: 600;
   }
+
+  blockquote {
+    font-size: 1.1em;
+    width: 75%;
+    margin: 22px auto;
+    font-family: ${props => props.theme.fontSubheader};
+    font-style: italic;
+    color: #555555;
+    border-left: 8px solid #78c0a8;
+    line-height: 1.6;
+    position: relative;
+    background: #ededed;
+    padding: 1.2rem;
+  }
+
+
+
+  /* blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  } */
 `;
 
 class BlogPostTemplate extends React.Component {
