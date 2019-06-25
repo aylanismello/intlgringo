@@ -3,58 +3,13 @@ import styled from 'styled-components';
 import { DiscussionEmbed } from 'disqus-react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
+import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
 import Hero from '../components/hero';
-
-
-const PostContent = styled.div`
-  /* border: 1px solid black; */
-  padding: 0.5rem 0.5rem;
-  font-family: ${props => props.theme.fontPost};
-  font-size: 1.5rem;
-  line-height: 1.4;
-  /* so default will be <= props.theme.breakpoint.mobile.XS / 380px */
-
-  @media (min-width: ${props => props.theme.breakpoint.mobileS}) {
-    /* border: 1px solid red; */
-    padding: 0.5rem 0.7rem;
-  }
-
-  @media (min-width: ${props => props.theme.breakpoint.mobileM}) {
-    /* border: 1px solid violet; */
-    padding: 1.5rem 25px;
-  }
-
-  @media (min-width: ${props => props.theme.breakpoint.mobileL}) {
-    /* border: 1px solid aqua; */
-    /* padding: 1rem 1.5rem; */
-    padding: 1.5rem 30px;
-  }
-
-  @media (min-width: ${props => props.theme.breakpoint.tablet}) {
-    /* border: 1px solid brown; */
-    padding: 1.5rem 160px;
-  }
-
-  @media (min-width: ${props => props.theme.breakpoint.tabletWide}) {
-    /* border: 1px solid orange; */
-  }
-
-  @media (min-width: ${props => props.theme.breakpoint.desktop}) {
-    /* border: 1px solid yellow; */
-    padding: 1.5rem 350px;
-  }
-
-  @media (min-width: ${props => props.theme.breakpoint.desktopWide}) {
-    /* border: 1px solid green; */
-    padding: 1.5rem 480px;
-  }
-`;
 
 const PostTitleContainer = styled.div`
   display: flex;
   justify-content: center;
-  /* border: 1px solid aqua; */
 
   padding: 15px 40px;
 
@@ -89,8 +44,10 @@ const PostTitleContainer = styled.div`
 
 const PostTitle = styled.span`
   font-family: ${props => props.theme.fontSubheader};
-  font-size: 30px;
-  font-weight: 600;
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.25;
+  font-weight: bold;
   padding: 1rem;
   /* border: 1px solid red; */
 `;
@@ -139,8 +96,6 @@ const PostTag = styled.div`
   }
 
   @media (max-width: ${props => props.theme.breakpoint.mobileXS}) {
-    /* border:  10px solid yellow; */
-    /* padding: 5px 10px; */
     font-size: 14px;
     padding: 5px 10px;
   }
@@ -171,26 +126,6 @@ const PostText = styled.div`
     background: #ededed;
     padding: 1.2rem;
   }
-
-
-
-  /* blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-  }
-  blockquote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-  blockquote p {
-    display: inline;
-  } */
 `;
 
 class BlogPostTemplate extends React.Component {
@@ -215,16 +150,13 @@ class BlogPostTemplate extends React.Component {
               {tags.map(tag => (
                 <PostTag>{tag}</PostTag>
               ))}
-              {/* <PostTag> 
-                TAgs dude
-              </PostTag> */}
             </PostTags>
           </PostTagsContainer>
           <PostTitleContainer className="PostTitleContainer">
             <PostTitle className="PostTitle">{post.title}</PostTitle>
           </PostTitleContainer>
           <Hero className="Hero" src={post.heroImage.sizes.src} />
-          <PostContent>
+          <MainContent>
             <PostText
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html
@@ -234,7 +166,7 @@ class BlogPostTemplate extends React.Component {
               shortname={disqusShortname}
               config={disqusConfig}
             />
-          </PostContent>
+          </MainContent>
         </div>
       </Base>
     );
@@ -277,5 +209,6 @@ export const pageQuery = graphql`
     }
   }
 `;
+
 
 
