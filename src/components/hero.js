@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 const homePageImg =
-  'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_2000/intl_gringo_banner_1';
+  'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_700,w_2200/v1561453037/gringo-sintra.jpg';
+  // 'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_2000/intl_gringo_banner_1';
 
 const HeroContainer = styled.div`
   @media (min-width: ${props => props.theme.breakpoint.tabletWide}) {
@@ -22,6 +23,7 @@ const HeroContainer = styled.div`
 const HeroStyle = styled.div`
   position: relative;
   background-image: url(${props => props.src || homePageImg});
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: ${props => (props.isHeader ? 'inherit' : '350px')};
