@@ -22,7 +22,6 @@ const HeroContainer = styled.div`
 
 const HeroStyle = styled.div`
   position: relative;
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); */
   background-image: url(${props => props.src || homePageImg});
   background-position: center;
   background-size: cover;
@@ -38,8 +37,9 @@ const HeroText = styled.span`
   transform: translate(-50%, -50%);
   color: white;
   font-family: ${props => props.theme.fontSubheader};
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
+  text-shadow: 0 2px 20px #444444;
 `;
 
 const LocationTextContainer = styled.div`

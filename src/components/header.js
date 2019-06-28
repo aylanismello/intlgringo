@@ -13,6 +13,8 @@ const Header = styled.div`
   background: white;
   font-family: ${props => props.theme.fontHeader};
   z-index: 100;
+
+  /* box-shadow: ${props => (props.withHero ? `none` : `1px 1px 1px 1px #eaeaea`)}; */
 `;
 
 const HeaderTextContainer = styled.div`
@@ -20,11 +22,9 @@ const HeaderTextContainer = styled.div`
   font-weight: 600;
   height: ${props => props.theme.headerTextHeight};
   top: 0;
-  /* left: 20px; */
   width: 100%;
   font-size: 34px;
   color: ${props => (props.withHero ? 'white' : 'black')};
-  /* border: 1px solid orange; */
   align-items: center;
   display: flex;
 
