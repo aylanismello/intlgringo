@@ -69,7 +69,6 @@ class Base extends React.Component {
             <meta
               property="og:image"
               content="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_700,w_2200/v1561453037/gringo-sintra.jpg"
-              // content="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_1200/v1561374621/gringo-open-graph-1.jpg"
             />
           </Helmet>
           <GlobalStyle />
