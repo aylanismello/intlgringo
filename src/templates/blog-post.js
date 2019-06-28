@@ -120,6 +120,16 @@ const PostText = styled.div`
     font-weight: 600;
   }
 
+  a {
+    text-decoration: underline; 
+    color: dodgerblue; 
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   blockquote {
     font-size: 1.1em;
     width: 75%;
@@ -154,7 +164,7 @@ class BlogPostTemplate extends React.Component {
         <div className="Post">
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
-              {tags.map(tag => (
+              {tags.slice(0, 3).map(tag => (
                 <PostTag>{tag}</PostTag>
               ))}
             </PostTags>
