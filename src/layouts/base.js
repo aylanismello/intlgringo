@@ -61,6 +61,10 @@ class Base extends React.Component {
 
             <meta property="og:title" content="Internationally Gringo" />
             <meta
+              name="keywords"
+              content="travel,world,blog,writing,local,language,asia,america"
+             />
+            <meta
               property="og:description"
               content="Traveling the world - so you don't have to."
             />
