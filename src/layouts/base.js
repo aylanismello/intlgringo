@@ -60,11 +60,16 @@ class Base extends React.Component {
             <link rel="canonical" href="https://intlgringo.com" />
 
             <meta property="og:title" content="Internationally Gringo" />
+            <meta
+              property="og:description"
+              content="Traveling the world - so you don't have to."
+            />
             <meta property="og:type" content="article" />
             <meta property="og:url" content="https://intlgringo.com" />
             <meta
               property="og:image"
-              content="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_1200/v1561374621/gringo-open-graph-1.jpg"
+              content="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_700,w_2200/v1561453037/gringo-sintra.jpg"
+              // content="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_1200/v1561374621/gringo-open-graph-1.jpg"
             />
           </Helmet>
           <GlobalStyle />
