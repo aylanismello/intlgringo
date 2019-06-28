@@ -51,6 +51,7 @@ const PostPreviewStyle = styled.div`
 const PostPreviewImg = styled.div`
   background-image: url(${props => props.src});
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 150px;
 `;

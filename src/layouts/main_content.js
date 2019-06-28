@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const MainContent = styled.div`
   padding: 1.5rem 0.5rem;
   /* maybe take in font here too */
-  font-size: 18px;
+  font-size: 16px;
   font-family: ${props => props.theme.fontPost};
   line-height: 1.35;
 

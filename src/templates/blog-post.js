@@ -104,6 +104,13 @@ const PostTag = styled.div`
 const PostText = styled.div`
   line-height: 1.6;
 
+  figcaption {
+    max-width: 400px;
+    font-size: 13px;
+    padding-left: 10px;
+    margin-top: -20px;
+  }
+
   img {
     max-width: 100%;
   }

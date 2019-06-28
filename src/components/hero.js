@@ -22,6 +22,7 @@ const HeroContainer = styled.div`
 
 const HeroStyle = styled.div`
   position: relative;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); */
   background-image: url(${props => props.src || homePageImg});
   background-position: center;
   background-size: cover;
@@ -57,7 +58,7 @@ const LocationTextContainer = styled.div`
 const LocationText = styled.span`
   font-family: ${props => props.theme.fontLocation};
   color: white;
-  font-size: 16px;
+  font-size: 14px;
 `;
 
 const Hero = ({ isHeader, src }) => (
@@ -68,10 +69,10 @@ const Hero = ({ isHeader, src }) => (
           <HeroText className="HeroText">
             Domestically exotic, internationally gringo.
           </HeroText>
-          <Link to="/b">
+          <Link to="/blog/top-5-places-i-visited-in-2018">
             <LocationTextContainer className="LocationTextContainer">
               <LocationText className="LocationText">
-                📍 Some cool place{' '}
+                📍 Sintra, Portugal{' '}
               </LocationText>
             </LocationTextContainer>
           </Link>
