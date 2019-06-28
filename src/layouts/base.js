@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import styledNormalize from 'styled-normalize';
+import { Helmet } from 'react-helmet';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
@@ -53,6 +54,19 @@ class Base extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Wrapper className="Wrapper">
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Internationally Gringo</title>
+            <link rel="canonical" href="https://intlgringo.com" />
+
+            <meta property="og:title" content="Internationally Gringo" />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="https://intlgringo.com" />
+            <meta
+              property="og:image"
+              content="https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_1200/v1561374621/gringo-open-graph-1.jpg"
+            />
+          </Helmet>
           <GlobalStyle />
           <Header withHero={withHero} />
           <Page withHero={withHero} className="Page">

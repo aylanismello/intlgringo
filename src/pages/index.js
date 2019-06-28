@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
+import { Helmet } from 'react-helmet';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
 import PostPreviews from '../components/post_previews';
@@ -101,7 +102,7 @@ class Index extends React.Component {
 
             <PostPreviews
               className="PostPreviews"
-              posts={posts.map((p) => p.node)}
+              posts={posts.map(p => p.node)}
               data={[
                 'Traveling spontaneously in an archipelago (thoughts on adjusting to the Philippines)',
                 '6 months in Southeast Asia, but Vietnam still shocks',
