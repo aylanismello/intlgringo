@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { DiscussionEmbed } from 'disqus-react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
+import SEO from '../components/seo';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
 import Hero from '../components/hero';
@@ -162,6 +163,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Base location={location}>
         <div className="Post">
+          <SEO image={post.heroImage.sizes.src} title={post.title} article />
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
               {tags.slice(0, 3).map(tag => (

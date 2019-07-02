@@ -24,10 +24,14 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Traveling the world so you don't have to | Internationally Gringo",
+    title: 'Internationally Gringo',
+    titleTemplate: '%s · Internationally Gringo',
     description:
       "My name is Aylan Mello and I'm trying out traveling full time and location-independent living. I chronicle my trials and tribulations here, as well as some dope picks on travel and culture.",
-    keywords: 'travel,world,blog,writing,local,adventure'
+    keywords: 'travel,world,blog,writing,local,adventure',
+    url: 'https://www.intlgringo.com',
+    twitterUsername: '@og_gringo',
+    image: 'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_700,w_2200/v1561453037/gringo-sintra.jpg'
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
