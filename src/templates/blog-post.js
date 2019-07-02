@@ -154,6 +154,8 @@ class BlogPostTemplate extends React.Component {
     const country = post.place && post.place.country;
     const { tags } = post;
 
+    const { heroImage, title, slug, description, body } = post;
+
     const disqusShortname = 'intlgringo';
     const disqusConfig = {
       identifier: post.id,
@@ -163,7 +165,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Base location={location}>
         <div className="Post">
-          <SEO image={post.heroImage.sizes.src} title={post.title} pathname={`blog/${post.slug}`} article />
+          <SEO image={heroImage.sizes.src} title={title} pathname={`blog/${slug}`} description={description} article />
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
               {tags.slice(0, 3).map(tag => (
@@ -172,13 +174,13 @@ class BlogPostTemplate extends React.Component {
             </PostTags>
           </PostTagsContainer>
           <PostTitleContainer className="PostTitleContainer">
-            <PostTitle className="PostTitle">{post.title}</PostTitle>
+            <PostTitle className="PostTitle">{title}</PostTitle>
           </PostTitleContainer>
-          <Hero className="Hero" src={post.heroImage.sizes.src} />
+          <Hero className="Hero" src={heroImage.sizes.src} />
           <MainContent>
             <PostText
               dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html
+                __html: body.childMarkdownRemark.html
               }}
             />
             <DiscussionEmbed
@@ -200,6 +202,7 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       slug
+      description
       tags
       place {
         country {
