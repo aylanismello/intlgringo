@@ -163,7 +163,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Base location={location}>
         <div className="Post">
-          <SEO image={post.heroImage.sizes.src} title={post.title} article />
+          <SEO image={post.heroImage.sizes.src} title={post.title} pathname={`blog/${post.slug}`} article />
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
               {tags.slice(0, 3).map(tag => (
@@ -199,6 +199,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
+      slug
       tags
       place {
         country {
