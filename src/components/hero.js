@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 const homePageImg =
-  'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_700,w_2200/v1561453037/gringo-sintra.jpg';
+  'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_2200/v1561453037/gringo-sintra.jpg';
   // 'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_2000/intl_gringo_banner_1';
 
 const HeroContainer = styled.div`

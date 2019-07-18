@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import { Helmet } from 'react-helmet';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
 import PostPreviews from '../components/post_previews';
@@ -54,8 +53,6 @@ class Index extends React.Component {
     const places = get(this, 'props.data.allContentfulPlace.edges');
     const countries = get(this, 'props.data.allContentfulCountry.edges');
 
- 
-
     return (
       <Base location={location}>
         <div className="Index">
@@ -103,17 +100,6 @@ class Index extends React.Component {
             <PostPreviews
               className="PostPreviews"
               posts={posts.map(p => p.node)}
-              data={[
-                'Traveling spontaneously in an archipelago (thoughts on adjusting to the Philippines)',
-                '6 months in Southeast Asia, but Vietnam still shocks',
-                'The Good, the Bad, and the South of Thailand',
-                'Traveling spontaneously in an archipelago (thoughts on adjusting to the Philippines)',
-                '6 months in Southeast Asia, but Vietnam still shocks',
-                'The Good, the Bad, and the South of Thailand',
-                'Traveling spontaneously in an archipelago (thoughts on adjusting to the Philippines)',
-                '6 months in Southeast Asia, but Vietnam still shocks',
-                'The Good, the Bad, and the South of Thailand'
-              ]}
             />
           </MainContent>
         </div>
@@ -155,14 +141,9 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
-          heroImage {
-            sizes {
-              src
-            }
-          }
+          heroImgName
         }
       }
     }
   }
 `;
-

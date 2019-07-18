@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import Link from 'gatsby-link';
+import { genCloudinary } from '../helpers/image_helper';
 
 const PostPreviewsStyle = styled.div`
   /* border: 1px solid pink; */
@@ -58,7 +59,6 @@ const PostPreviewImg = styled.div`
 
 const PostPreview = ({ title, heroImg, mainTag }) => (
   <PostPreviewStyle>
-    {/* <img src={heroImg} className="PostPreviewHeroImg" /> */}
     <PostPreviewImg src={heroImg} className="PostPreviewImg" />
     <div className="PostPreviewTag"> {mainTag.toUpperCase()} </div>
     <div className="PostPreviewTitle">{title}</div>
@@ -72,7 +72,7 @@ const PostPreviews = ({ posts }) => {
         <Link to={`/blog/${post.slug}`}>
           <PostPreview
             title={post.title}
-            heroImg={post.heroImage && post.heroImage.sizes.src}
+            heroImg={genCloudinary(post.heroImgName, { q: 70, w: 600 })}
             mainTag={(post.tags && post.tags[0]) ? post.tags[0] : ''}
           />
         </Link>

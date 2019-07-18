@@ -7,6 +7,7 @@ import SEO from '../components/seo';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
 import Hero from '../components/hero';
+import { genCloudinary } from '../helpers/image_helper';
 
 const PostTitleContainer = styled.div`
   display: flex;
@@ -122,8 +123,8 @@ const PostText = styled.div`
   }
 
   a {
-    text-decoration: underline; 
-    color: dodgerblue; 
+    text-decoration: underline;
+    color: dodgerblue;
     opacity: 0.8;
 
     &:hover {
@@ -154,7 +155,8 @@ class BlogPostTemplate extends React.Component {
     const country = post.place && post.place.country;
     const { tags } = post;
 
-    const { heroImage, title, slug, description, body } = post;
+    const { title, slug, description, body, heroImgName } = post;
+    const imgSrc = genCloudinary(heroImgName, { w: 1200, q: 80 });
 
     const disqusShortname = 'intlgringo';
     const disqusConfig = {
@@ -165,7 +167,13 @@ class BlogPostTemplate extends React.Component {
     return (
       <Base location={location}>
         <div className="Post">
-          <SEO image={heroImage.sizes.src} title={title} pathname={`blog/${slug}`} description={description} article />
+          <SEO
+            image={imgSrc}
+            title={title}
+            pathname={`blog/${slug}`}
+            description={description}
+            article
+          />
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
               {tags.slice(0, 3).map(tag => (
@@ -176,7 +184,7 @@ class BlogPostTemplate extends React.Component {
           <PostTitleContainer className="PostTitleContainer">
             <PostTitle className="PostTitle">{title}</PostTitle>
           </PostTitleContainer>
-          <Hero className="Hero" src={heroImage.sizes.src} />
+          <Hero className="Hero" src={imgSrc} />
           <MainContent>
             <PostText
               dangerouslySetInnerHTML={{
@@ -197,7 +205,7 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-         # https://www.contentful.com/developers/docs/concepts/data-model/
+  # https://www.contentful.com/developers/docs/concepts/data-model/
   query BlogPostBySlug($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
@@ -219,11 +227,7 @@ export const pageQuery = graphql`
         name
       }
       publishDate(formatString: "MMMM Do, YYYY")
-      heroImage {
-        sizes {
-          src
-        }
-      }
+      heroImgName
       body {
         childMarkdownRemark {
           html
@@ -232,6 +236,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-
-
