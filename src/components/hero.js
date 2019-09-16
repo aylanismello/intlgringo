@@ -59,6 +59,7 @@ const LocationText = styled.span`
   font-family: ${props => props.theme.fontLocation};
   color: white;
   font-size: 14px;
+  padding-right: 5px;
 `;
 
 const Hero = ({ isHeader, src }) => (
