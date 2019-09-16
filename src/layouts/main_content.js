@@ -11,11 +11,12 @@ const MainContent = styled.div`
   grid-row-gap: 5rem;
 
   @media (min-width: ${props => props.theme.breakpoint.mobileS}) {
-    padding: 1.5rem 0.7rem;
+    padding: 1.5rem 20px;
   }
 
+  /* this is where shit goes sourz */
   @media (min-width: ${props => props.theme.breakpoint.mobileM}) {
-    padding: 1.5rem 25px;
+    padding: 1.5rem 28px;
   }
 
   @media (min-width: ${props => props.theme.breakpoint.mobileL}) {

@@ -94,7 +94,7 @@ const PostTag = styled.div`
   padding: 10px 15px;
 
   &:hover {
-    cursor: pointer;
+    cursor: default;
   }
 
   @media (max-width: ${props => props.theme.breakpoint.mobileXS}) {

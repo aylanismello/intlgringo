@@ -37,7 +37,7 @@ const theme = {
   fontPost: `'Montserrat', sans-serif`,
   fontHeader: `'Quicksand', sans-serif`,
   fontSubheader: 'Poppins',
-  fontLocation: `'Dancing Script', cursive`
+  fontLocation: 'Poppins'
 };
 
 const Wrapper = styled.div``;

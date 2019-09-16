@@ -11,9 +11,16 @@ const Footer = styled.div`
   align-items: center;
   font-size: 1.2rem;
 
+  @media (max-width: ${props => props.theme.breakpoint.mobileL}) {
+    flex-direction: column;
+  }
+
   > a {
     margin: 0 7px 0 7px;
     padding: 3px;
+    @media (max-width: ${props => props.theme.breakpoint.mobileL}) {
+      padding: 5px;
+    }
     &:hover {
       opacity: 0.8;
     }

@@ -34,7 +34,8 @@ const PostPreviewStyle = styled.div`
 
   .PostPreviewTag {
     color: #324fca;
-    font-size: 15px;
+    letter-spacing: 1.2px;
+    font-size: 0.8em;
     font-weight: 600;
   }
 
@@ -55,6 +56,7 @@ const PostPreviewImg = styled.div`
   background-position: center;
   width: 100%;
   height: 150px;
+  margin-bottom: .6rem;
 `;
 
 const PostPreview = ({ title, heroImg, mainTag }) => (
