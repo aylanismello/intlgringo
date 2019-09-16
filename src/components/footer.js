@@ -13,6 +13,7 @@ const Footer = styled.div`
 
   @media (max-width: ${props => props.theme.breakpoint.mobileL}) {
     flex-direction: column;
+    padding: 1.6rem 0;
   }
 
   > a {
@@ -42,7 +43,7 @@ export default () => (
       twitter 🐦
     </a>
     <a href={HANDLES.AYLAN} target="_blank">
-      designed + coded by aylan.io 💻
+      made by aylan.io 💻
     </a>
   </Footer>
 );

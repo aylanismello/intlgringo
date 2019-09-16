@@ -25,9 +25,10 @@ const PostPreviewsStyle = styled.div`
 `;
 
 const PostPreviewStyle = styled.div`
-  /* border: 1px solid green; */
   font-family: ${props => props.theme.fontSubheader};
   line-height: 1.4;
+  padding-bottom: 1rem;
+
   &:hover {
     cursor: pointer;
   }
@@ -42,6 +43,14 @@ const PostPreviewStyle = styled.div`
   .PostPreviewTitle {
     font-size: 16px;
     font-weight: 800;
+
+    /* font-size: 16px;
+    font-weight: 500; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .PostPreviewHeroImg {
