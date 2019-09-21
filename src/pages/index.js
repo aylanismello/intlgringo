@@ -59,7 +59,7 @@ class Index extends React.Component {
           <MainContent className="PageContent">
             <AylanBio className="AylanBio">
               <AylanPic
-                src="https://res.cloudinary.com/burncartel/image/upload/c_scale,q_65,w_600/v1561276078/aylan_1_pai.jpg"
+                src="https://res.cloudinary.com/burncartel/image/upload/c_scale,q_65,w_600/v1561276078/gringo-aylan-1.jpg"
                 className="AylanPic"
               />
 

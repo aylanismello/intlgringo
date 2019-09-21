@@ -176,7 +176,7 @@ class BlogPostTemplate extends React.Component {
           />
           <PostTagsContainer className="PostTagsContainer">
             <PostTags className="PostTags">
-              {tags.slice(0, 3).map(tag => (
+              {(tags || []).slice(0, 3).map(tag => (
                 <PostTag>{tag}</PostTag>
               ))}
             </PostTags>
