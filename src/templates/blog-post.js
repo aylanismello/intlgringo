@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { DiscussionEmbed } from 'disqus-react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
+import { window } from 'browser-monads';
 import SEO from '../components/seo';
 import MainContent from '../layouts/main_content';
 import Base from '../layouts/base';
@@ -108,9 +109,13 @@ const PostText = styled.div`
 
   /* global override */
   .instagram-media {
-    border: 5px solid red;
-    margin: 0 auto;
+    /* border: 5px solid red; */
+    margin: 0 auto!important;
   }
+
+  /* iframe#instagram-embed-0 {
+    border: 5px solid red;
+  } */
 
   figcaption {
     max-width: 400px;
@@ -154,6 +159,10 @@ const PostText = styled.div`
 `;
 
 class BlogPostTemplate extends React.Component {
+  componentDidMount() {
+    window.instgrm.Embeds.process();
+  }
+
   render() {
     const { location } = this.props;
 
