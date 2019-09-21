@@ -106,6 +106,12 @@ const PostTag = styled.div`
 const PostText = styled.div`
   line-height: 1.6;
 
+  /* global override */
+  .instagram-media {
+    border: 5px solid red;
+    margin: 0 auto;
+  }
+
   figcaption {
     max-width: 400px;
     font-size: 13px;

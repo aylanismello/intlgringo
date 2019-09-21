@@ -29,10 +29,11 @@ module.exports = {
     description:
       "My name is Aylan Mello and I'm trying out traveling full time and location-independent living. I chronicle my trials and tribulations here, as well as some dope picks on travel and culture.",
     keywords: 'travel,world,blog,writing,local,adventure',
-    // get rid of this final / at yr own discretion  
+    // get rid of this final / at yr own discretion
     url: 'https://www.intlgringo.com/',
     twitterUsername: '@og_gringo',
-    image: 'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_700,w_2200/v1561453037/gringo-sintra.jpg'
+    image:
+      'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_700,w_2200/v1561453037/gringo-sintra.jpg'
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -68,7 +69,23 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 590
             }
-          }
+          },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              usePrefix: true,
+              providers: {
+                include: ['Twitter', 'Instagram'],
+                settings: {
+                  // Ex. Show all Twitter embeds with the dark theme
+                  Twitter: { theme: 'dark' },
+                  // Ex. Hide all Instagram comments by default
+                  Instagram: { hidecaption: true }
+                }
+              }
+            }
+          },
+          `gatsby-remark-responsive-iframe`
         ]
       }
     }
