@@ -110,7 +110,7 @@ const PostText = styled.div`
   /* global override */
   .instagram-media {
     /* border: 5px solid red; */
-    margin: 0 auto!important;
+    margin: 0 auto !important;
   }
 
   /* iframe#instagram-embed-0 {
@@ -122,6 +122,16 @@ const PostText = styled.div`
     font-size: 13px;
     padding-left: 10px;
     margin-top: -20px;
+  }
+
+  .ig {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    color: darkslategray;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
   }
 
   img {
