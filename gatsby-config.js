@@ -56,6 +56,14 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src:
+          'https://www.instagram.com/static/bundles/es6/EmbedSDK.js/2fe3a16f6aeb.js',
+        onLoad: `() => { console.log('loaded embed library'); }`
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -77,7 +85,7 @@ module.exports = {
                 include: ['Instagram'],
                 settings: {
                   // Ex. Hide all Instagram comments by default
-                  Instagram: { hidecaption: true }
+                  Instagram: { hidecaption: true, omitscript: true }
                 }
               }
             }

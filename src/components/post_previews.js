@@ -79,12 +79,13 @@ const PostPreview = ({ title, heroImg, mainTag }) => (
 const PostPreviews = ({ posts }) => {
   return (
     <PostPreviewsStyle>
-      {posts.map((post) => (
-        <Link to={`/blog/${post.slug}`}>
+      {posts.map(post => (
+        <Link to={`/blog/${post.slug}`} key={`${post.slug}-link`}>
           <PostPreview
+            key={post.slug}
             title={post.title}
             heroImg={genCloudinary(post.heroImgName, { q: 70, w: 600 })}
-            mainTag={(post.tags && post.tags[0]) ? post.tags[0] : ''}
+            mainTag={post.tags && post.tags[0] ? post.tags[0] : ''}
           />
         </Link>
       ))}
