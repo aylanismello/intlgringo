@@ -54,7 +54,6 @@ module.exports = {
     },
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-transformer-remark`,
@@ -75,10 +74,8 @@ module.exports = {
             options: {
               usePrefix: true,
               providers: {
-                include: ['Twitter', 'Instagram'],
+                include: ['Instagram'],
                 settings: {
-                  // Ex. Show all Twitter embeds with the dark theme
-                  Twitter: { theme: 'dark' },
                   // Ex. Hide all Instagram comments by default
                   Instagram: { hidecaption: true }
                 }

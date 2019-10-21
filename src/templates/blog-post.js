@@ -169,8 +169,26 @@ const PostText = styled.div`
 `;
 
 class BlogPostTemplate extends React.Component {
+  // state = {
+  //   instaLoaded: false
+  // };
+
   componentDidMount() {
-    window.instgrm.Embeds.process();
+    this.processEmbeddedIG();
+  }
+
+  processEmbeddedIG() {
+    // const { instaLoaded } = this.state;
+    // console.log('trying to process');
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+    // this.setState({ instaLoaded: true });
+    // else if (!instaLoaded) {
+    //   setTimeout(() => {
+    //     this.processEmbeddedIG();
+    //   }, 200);
+    // }
   }
 
   render() {
